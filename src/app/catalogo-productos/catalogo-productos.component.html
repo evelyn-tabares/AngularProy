@@ -1,0 +1,80 @@
+<nav  class="navbar navbar-light custom-bg-color" >
+    <div class="container-fluid">
+        <h1 style="color: #734EEB;">Lista de Productos</h1>
+        <div class="d-flex">
+            <button (click)=" clickAgregarProducto()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Agregar Producto</button>
+        </div>
+    </div>
+</nav>
+
+<table class ="table mt-3">
+    <thead>
+        <tr>
+            <th scope = "col">ID</th>
+            <th scope = "col">Nombre</th>
+            <th scope = "col">Descripción</th>
+            <th scope = "col">Tipo</th>
+            <th scope = "col">Precio</th>
+            <th scope = "col">Stock</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of CatalogoData">
+          <td>{{row.id}}</td>
+          <td>{{row.Nombre}}</td>
+          <td>{{row.Descripcion}}</td>
+          <td>{{row.Tipo}}</td>
+          <td>{{row.Precio}}</td>
+          <td>{{row.Stock}}</td>
+
+            <td>
+                <button (click)="onEdit(row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Editar</button>
+                <button (click) ="deleteProducto(row)" class="btn btn-danger mx-3">Eliminar</button>
+            </td>
+    </tbody>
+</table>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalles del producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formID">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                  <input type="text" formControlName="Nombre" class="form-control" id="Nombre1" aria-describedby="Nombre">
+    
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Descripción</label>
+                  <input type="text" formControlName="Descripcion" class="form-control" id="Descripcion1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Tipo</label>
+                    <input type="text" formControlName="Tipo" class="form-control" id="Tipo1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Precio</label>
+                    <input type="number" formControlName="Precio" class="form-control" id="Precio1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Stock</label>
+                    <input type="number" formControlName="Stock" class="form-control" id="Stock1">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" *ngIf="MostrarAgregar" (click)= "postDetallesProducto()" class="btn btn-primary">Agregar</button>
+          <button type="button" *ngIf="MostrarActualizar" (click)="updateDetallesProduto()" class="btn btn-primary">Actualizar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>

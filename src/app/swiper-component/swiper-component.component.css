@@ -1,0 +1,151 @@
+.swiper-slide:hover {
+    background-color: #F3F8E8;
+
+}
+html, body{
+    position:relative;
+    height:100%;
+}
+:root{
+    /* FONT */
+    --font: 'Poppins', sans-serif;
+  
+    /* COLORS */
+    --color: #9176FF;
+    --bg-color: #f4f4f4;
+  }
+  
+  /* ------------ BASE ------------ */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    background-color: var(--bg-color);
+  }
+
+.swiper{
+    width:100%;
+    padding: 50px 0 50px 0;
+    
+}
+
+.swiper-slide{
+    width: 20em;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* Transición suave para cambios de tamaño */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    margin: 0 2em;
+    margin-top:2%;
+    margin-bottom:2%;
+    
+    .btn-1{
+        display: inline-block;
+        padding: 5px 55px;
+        border: 1px solid #FC3A79;
+        color: #FC3A79;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-top:10px;
+     
+    }
+    .btn-1:hover  {
+        background-color: #FC3A79; /* Cambia el color de fondo al pasar el mouse sobre .btn-1 */
+        color: #fff; /* Cambia el color del texto al pasar el mouse sobre .btn-1 */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave en el cambio de color */
+    }
+    
+    .product-txt{
+        flex-basis:30%;
+        text-align: center;
+
+    }
+
+    .product-txt span {
+        font-size: 25px;
+        color:#FC3A79;
+        font-weight: bold;
+
+    }
+
+    .product-txt h3{
+        font-size:20px;
+        color:#000;
+        text-transform: uppercase;
+
+    }
+
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 10px;
+}
+.icons i{
+    font-size: 25px;
+    color:  #FC3A79;
+    margin-right: 25px;
+    margin-left:25px;
+}
+
+.icons img{
+    width:120px;
+}
+
+.product-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .product-txt p{
+        font-size: 14px;
+        color: #1e1e1e;
+    }
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product-img{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+
+
+  .swiper-slide:not(.swiper-slide-active){
+    filter: blur(1px);
+  }
+  
+
+.swiper-slide:not(.swiper-slide-active) {
+    transform: scale(0.8); /* Reducir el tamaño cuando no está activo */
+    opacity: 0.7; /* Puedes reducir la opacidad para destacar los activos */
+}
+
+/* Agrega esto a tu CSS */
+.swiper-slide:hover .fa-heart {
+    color: #734eeb; /* Cambia el color al pasar el mouse sobre .fa-heart */
+    transform: scale(1.2);
+  }
+  .swiper-slide .fa-heart {
+    color:  #FC3A79;/* Color inicial */
+    transition: color 0.3s ease; /* Transición suave de color en 0.3 segundos */
+  }

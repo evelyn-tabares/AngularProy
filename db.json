@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "Nombre": "Camiseta",
+      "Descripcion": " Camiseta de algodón de manga corta",
+      "Tipo": " Ropa casual",
+      "Precio": 65000,
+      "Stock": 54
+    },
+    {
+      "id": 3,
+      "Nombre": "Vestido",
+      "Descripcion": "Vestido corto estampado floral",
+      "Tipo": "Ropa Formal",
+      "Precio": 45000,
+      "Stock": 95
+    },
+    {
+      "id": 4,
+      "Nombre": "Chaqueta",
+      "Descripcion": "Chaqueta ligera con capucha",
+      "Tipo": "Prenda de abrigo",
+      "Precio": 100000,
+      "Stock": 120
+    },
+    {
+      "id": 5,
+      "Nombre": "Camisa de vestir",
+      "Descripcion": "Camisa de vestir de manga larga",
+      "Tipo": "Ropa formal",
+      "Precio": 55000,
+      "Stock": 12
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

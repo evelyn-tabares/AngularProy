@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "Nombre": "Vestido",
+      "Descripcion": "Vestido corto estampado floral",
+      "Tipo": "Ropa Formal",
+      "Precio": 50000,
+      "Stock": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
