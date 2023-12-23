@@ -7,6 +7,22 @@
       "Tipo": "Ropa Formal",
       "Precio": 50000,
       "Stock": 5
+    },
+    {
+      "id": 2,
+      "Nombre": "Chaqueta",
+      "Descripcion": "Chaqueta ligera con capucha",
+      "Tipo": "Prenda de abrigo",
+      "Precio": 45000,
+      "Stock": 12
+    },
+    {
+      "id": 3,
+      "Nombre": "Blazer",
+      "Descripcion": "Blazer Silueta entallada",
+      "Tipo": "Ropa Formal",
+      "Precio": 45000,
+      "Stock": 12
     }
   ],
   "comments": [],
